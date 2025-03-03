@@ -1,0 +1,1595 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4231903150571503"
+     crossorigin="anonymous"></script>
+    <meta name="google-adsense-account" content="ca-pub-4231903150571503">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9QT68Y0BD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y9QT68Y0BD');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Informasi Seputar Anchor Cafe & Roastery Batam Menu Makanan dan Minumam Terbaik Se kota Batam">
+    <meta name="keywords" content="Anchor Cafe & Roastery, Recipe Menu, Cefe Di Batam, Tempat Nongkrong di Batam">
+    <meta name="author" content="Anchor Cafe & Roastery">
+    <title>Anchor Cafe & Roastery [Recipes Menu]</title>
+    <link rel="icon" href="https://logo.clearbit.com/anchorcafeandroastery.com" type="image/x-icon">
+    <style>
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #008a8a;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .logo a {
+    font-size: 2rem;
+    color: #008a8a;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 30px; /* Increased margin to add space between logo and menu */
+    animation: logoColorChange 4s infinite; /* Animation to change logo color */
+}
+
+@keyframes logoColorChange {
+    0% {
+        color: #008a8a;
+    }
+    25% {
+        color: #d9e7e7;
+    }
+    50% {
+        color: #008a8a;
+    }
+    75% {
+        color: #d9e7e7;
+    }
+    100% {
+        color: #008a8a;
+    }
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center menu items */
+    margin-top: 0;
+    padding: 0;
+}
+
+header ul li {
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+header ul li:first-child {
+    margin-left: 0; /* Remove left margin from the first item */
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #008a8a;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('https://images.squarespace-cdn.com/content/v1/59473f0046c3c4bb36a4167d/1611301928603-AUSCJTN48YQ93S89Z13Z/IMG_2307.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #008a8a;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85); /* Semi-transparent dark overlay */
+}
+
+.hero-content {
+    z-index: 1;
+    padding: 20px;
+    color: #d9e7e7;
+    max-width: 80%;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+.cta-btn {
+    background-color: #008a8a;
+    color: #d9e7e7;
+    padding: 20px 35px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #D4600D;
+    transform: scale(1.05);
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: auto; /* Menambahkan scroll pada modal jika konten lebih panjang */
+}
+
+/* Konten Modal */
+.modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    width: 70%;
+    max-width: 700px;
+    max-height: 80vh; /* Menentukan batas tinggi modal */
+    overflow-y: auto; /* Scroll vertikal jika konten melebihi batas */
+    border-radius: 10px;
+}
+
+/* Tombol Close */
+.close {
+    color: #FF6200;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #008a8a;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+footer ul li a:hover {
+    color: #FF6200;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .cta-btn {
+        padding: 10px 30px;
+        font-size: 1.1rem;
+    }
+
+    header .logo a {
+        font-size: 1.7rem;
+    }
+
+    header ul {
+        flex-direction: column;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    header ul li {
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cta-btn {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+
+    header .logo a {
+        font-size: 1.5rem;
+    }
+
+    header ul {
+        flex-direction: column;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    header ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .cta-btn {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+
+    header .logo a {
+        font-size: 1.3rem;
+    }
+
+    header ul {
+        flex-direction: column;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    header ul li {
+        margin-left: 0;
+        margin-bottom: 8px;
+    }
+}
+
+
+/* Job Listings Section (Grid 3 Kolom Horizontal) */
+.job-listings {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Membuat 3 kolom dalam satu baris */
+    gap: 20px; /* Memberikan jarak antar elemen */
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.job-item {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Pastikan gambar dalam setiap job item memiliki lebar yang tepat */
+.job-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.job-item h3 {
+    margin: 15px 0;
+    font-size: 1.5rem;
+}
+
+.job-item p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.job-item .apply-btn {
+    background-color: #FF740F;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+}
+
+.job-item .apply-btn:hover {
+    background-color: #D4600D;
+    transform: scale(1.05);
+}
+
+/* Modal for Apply Now */
+#applyModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    width: 70%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.modal-content h2 {
+    font-size: 1.75rem;
+    margin-bottom: 15px;
+}
+
+.modal-content #modalTitle {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.modal-content #modalDescription {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Close Button */
+.close {
+    color: #008a8a;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .job-listings {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom pada layar lebih kecil */
+    }
+}
+
+@media (max-width: 768px) {
+    .job-listings {
+        grid-template-columns: 1fr; /* 1 kolom pada layar lebih kecil */
+    }
+}
+
+/* FAQ CSS */
+  .faq-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .faq-item {
+    background-color: #f9f9f9;
+    border-left: 5px solid #008a8a;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .faq-item h3 {
+    font-size: 1.2rem;
+    color: #333;
+    padding: 20px;
+  }
+
+  .faq-item p {
+    font-size: 1rem;
+    color: #333;
+  }
+
+  .faq-item a {
+    color: #008a8a;
+    text-decoration: none;
+  }
+
+  .faq-item a:hover {
+    text-decoration: underline;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+        <div class="logo">
+            <a href="https://logo.clearbit.com/kai.id" target="_blank" style="font-size: 1.8rem; color: white; text-decoration: none; font-weight: bold;">Anchor Cafe & Roastery</a>
+        </div>
+            <ul>
+                <li><a href="#" id="aboutBtn">About Us</a></li>
+                <li><a href="#" id="servicesBtn">Our Menu</a></li>
+                <li><a href="#" id="contactBtn">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Anchor Cafe & Roastery</h1>
+            <p>Where Every Cup Tells a Story, Brewed to Perfection, and Anchored in the Rich Flavors of Batam.</p>
+            <a href="#" id="applyBtn" class="cta-btn"><strong>SPECIAL MENU</strong></a>
+        </div>
+    </section>
+
+<!-- Job Listings Section (Grid 3 Kolom) -->
+<section class="job-listings">
+    <div class="job-item">
+        <img src="https://northernyum.com/wp-content/uploads/2021/03/Homemade-Infused-Water-Recipes_Intro.png" alt="Anchor Cafe & Roastery" width="500" height="auto">
+        <h3>Iced Fruit Infused Water</h3>
+        <p>Minuman segar yang dibuat dengan merendam potongan buah segar, sayuran, atau rempah-rempah dalam air dingin.</p>
+        <br />
+        <a href="#" id="applyBtn1" class="cta-btn">DETAILS & BENEFIT</a>
+    </div>
+
+    <div class="job-item">
+        <img src="https://www.mashed.com/img/gallery/why-you-should-avoid-cracker-barrels-mommas-pancake-breakfast/mommas-pancake-breakfast-is-880-calories-before-bacon-and-sausage-1621974450.jpg" alt="Mommas Breakfast Platter" alt="Mommas Breakfast Platter" width="500" height="auto">
+        <h3>Mommas Breakfast Platter</h3>
+        <p><strong>Mommas Breakfast Platter</strong> adalah pilihan sarapan lengkap yang sempurna untuk memulai hari. Selamat menikmati!</p>
+        <br />
+        <a href="#" id="applyBtn2" class="cta-btn">DETAILS & BENEFIT</a>
+    </div>
+
+    <div class="job-item">
+        <img src="https://mojo.generalmills.com/api/public/content/Pw6SBIgi-Ee6pTZBpU1oBg_gmi_hi_res_jpeg.jpeg?v=448d88d0&t=466b54bb264e48b199fc8e83ef1136b4" alt="Classic Pancakes" width="500" itemprop="image">
+        <h3>Classic Pancakes</h3>
+        <p><strong>Classic Pancakes</strong> adalah pilihan sarapan manis yang lezat dan mudah dibuat. Selamat menikmati!</p>
+        <br />
+        <a href="#" id="applyBtn3" class="cta-btn">DETAILS & BENEFIT</a>
+    </div>
+
+    <div class="job-item">
+          <img src="https://californiaavocado.com/wp-content/uploads/2020/07/California-Avocado-Toast-Three-Ways.jpeg" alt="Avocado Toast" width="500" itemprop="image">
+        <h3>Avocado Toast</h3>
+        <p><strong>Avocado Toast</strong> adalah pilihan sarapan sehat yang mudah dibuat dan kaya nutrisi. Selamat menikmati!</p>
+        <br />
+        <a href="#" id="applyBtn4" class="cta-btn">DETAILS & BENEFIT</a>
+    </div>
+
+    <div class="job-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Traditional_Eggs_Benedict.jpg/640px-Traditional_Eggs_Benedict.jpg" alt="Eggs Benedict" width="500">
+        <h3>Eggs Benedict</h3>
+        <p><strong>Eggs Benedict</strong> adalah menu sarapan klasik dengan rasa yang lezat dan mewah. Selamat mencoba!</p>
+        <br />
+        <a href="#" id="applyBtn5" class="cta-btn">DETAILS & BENEFIT</a>
+    </div>
+
+    <div class="job-item">
+        <img src="https://assets-jpcust.jwpsrv.com/thumbnails/GglMy51k-720.jpg" alt="French Toast">
+        <h3>French Toast</h3>
+        <p><strong>French Toast</strong> adalah menu sarapan klasik yang manis dan lezat. Selamat mencoba!</p>
+        <br />
+        <a href="#" id="applyBtn6" class="cta-btn">DETAILS & BENEFIT</a>
+    </div>
+    <!-- Add more job items as needed -->
+</section>
+
+
+<section>
+  <h2>Orang lain juga bertanya</h2>
+
+<div itemscope itemtype="https://schema.org/FAQPage">
+    <div class="faq-container">
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apa itu Anchor Cafe & Roastery?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Anchor Cafe & Roastery adalah sebuah kafe yang mengkhususkan diri pada kopi spesial, dengan proses pemanggangan biji kopi (roastery) yang dilakukan di tempat. Mereka juga menawarkan berbagai menu makanan dan minuman lainnya.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Di mana lokasi Anchor Cafe & Roastery?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Anchor Cafe & Roastery berlokasi di Ruko Dermaga Culinary Paradise Blok RF No.11, Kota Batam, Kepulauan Riau 29462.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Jam buka Anchor Cafe & Roastery?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Buka setiap hari mulai pukul 08.00 hingga 20.00.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery menyediakan tempat untuk acara pribadi?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Ya, Anchor Cafe & Roastery menyediakan ruang pribadi yang dapat digunakan untuk acara khusus.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Bagaimana cara melakukan reservasi di Anchor Cafe & Roastery?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Reservasi dapat dilakukan melalui telepon atau pesan WhatsApp ke nomor yang tertera di situs web resmi mereka.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery memiliki akun media sosial?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Ya, mereka memiliki akun Instagram dan Facebook.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery menyediakan Wi-Fi gratis?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Kemungkinan besar iya, namun untuk kepastiannya, disarankan untuk menanyakan langsung kepada staf kafe.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery ramah keluarga?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Ya, Anchor Cafe & Roastery memiliki suasana yang nyaman dan cocok untuk keluarga.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apa yang membuat kopi di Anchor Cafe & Roastery spesial?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Mereka menggunakan biji kopi pilihan yang dipanggang sendiri di tempat, sehingga menjamin kesegaran dan kualitas rasa.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery menjual biji kopi?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Ya, mereka menjual berbagai jenis biji kopi yang telah dipanggang.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apa saja jenis kopi yang ditawarkan di Anchor Cafe & Roastery?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Mereka menawarkan berbagai jenis kopi spesial, mulai dari espresso, cappuccino, latte, hingga kopi filter.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery menyediakan kopi dengan metode seduh manual?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Ya, mereka menyediakan berbagai metode seduh manual seperti V60, Chemex, dan lainnya.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Dari mana asal biji kopi yang digunakan di Anchor Cafe & Roastery?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Mereka menggunakan biji kopi yang berasal dari berbagai daerah di Indonesia dan dunia.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery memiliki barista yang berpengalaman?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Ya, mereka memiliki barista yang terlatih dan berpengalaman dalam menyajikan kopi berkualitas.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery mengadakan kelas atau workshop tentang kopi?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Untuk informasi mengenai kelas atau workshop, disarankan untuk menghubungi pihak kafe secara langsung.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apa saja menu makanan yang ditawarkan di Anchor Cafe & Roastery?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Mereka menawarkan berbagai menu makanan, mulai dari sarapan, hidangan utama, hingga makanan penutup.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery memiliki menu vegetarian atau vegan?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Untuk informasi mengenai menu vegetarian atau vegan, disarankan untuk melihat menu di situs web resmi mereka atau menghubungi pihak kafe.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery menyediakan minuman selain kopi?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Ya, mereka menyediakan berbagai minuman seperti teh, cokelat, dan jus.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery memiliki menu kue atau roti?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Ya, mereka menawarkan berbagai pilihan kue dan roti yang dibuat segar setiap hari.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery menyediakan menu sarapan?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Ya, mereka menyediakan menu sarapan dengan berbagai pilihan hidangan.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery menyediakan menu makan siang dan makan malam?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Ya, mereka menyediakan menu makan siang dan makan malam dengan berbagai pilihan hidangan.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Bagaimana suasana di Anchor Cafe & Roastery?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Suasana di Anchor Cafe & Roastery nyaman dan modern, cocok untuk bersantai atau bekerja.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery memiliki area merokok?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Untuk informasi mengenai area merokok, disarankan untuk menanyakan langsung kepada staf kafe.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery menerima pembayaran dengan kartu kredit atau debit?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Kemungkinan besar iya, namun untuk kepastiannya, disarankan untuk menanyakan langsung kepada staf kafe.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery memiliki tempat parkir?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Karena terletak di area ruko, tempat parkir tersedia di area parkir ruko tersebut.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery sering mengadakan acara khusus?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Untuk informasi mengenai acara khusus, disarankan untuk mengikuti akun media sosial mereka.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery menjual merchandise?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Untuk informasi mengenai merchandise, disarankan untuk menanyakan langsung kepada staf kafe.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery memiliki program loyalitas pelanggan?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Untuk informasi mengenai program loyalitas, disarankan untuk menanyakan langsung kepada staf kafe.</p>
+            </div>
+        </div>
+
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery menjual merchandise edisi terbatas?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Kami sesekali mengeluarkan merchandise edisi terbatas. Informasi mengenai merchandise edisi terbatas dapat dilihat di akun media sosial kami.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery menyediakan opsi kopi dengan susu nabati organik?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Kami berusaha menyediakan opsi susu nabati organik. Ketersediaan dapat ditanyakan kepada staf kami.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery memiliki program daur ulang untuk limbah kopi?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Kami sedang mengembangkan program daur ulang limbah kopi. Informasi lebih lanjut akan diumumkan di media sosial kami.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery menyediakan opsi kopi dengan pemanis alami?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Ya, kami menyediakan opsi kopi dengan pemanis alami seperti madu atau sirup agave.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery memiliki program pelatihan barista?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Kami memiliki program pelatihan barista internal untuk memastikan kualitas kopi yang konsisten.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery menyediakan opsi minuman dingin tanpa kafein?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Ya, kami menyediakan berbagai opsi minuman dingin tanpa kafein seperti jus buah segar dan mocktail.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery memiliki program kemitraan dengan petani kopi lokal?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Kami memiliki program kemitraan dengan beberapa petani kopi lokal untuk mendukung pertanian berkelanjutan.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery menyediakan opsi makanan penutup rendah gula?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Kami menyediakan beberapa opsi makanan penutup rendah gula. Informasi lebih lanjut dapat ditanyakan kepada staf kami.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery memiliki program pengiriman untuk biji kopi?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Ya, kami memiliki program pengiriman untuk biji kopi ke berbagai wilayah. Informasi lebih lanjut dapat dilihat di situs web kami.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery menyediakan opsi minuman dengan rempah-rempah tradisional?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Kami sesekali menyediakan minuman dengan rempah-rempah tradisional. Informasi lebih lanjut dapat ditanyakan kepada staf kami.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery memiliki program donasi untuk kegiatan sosial?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Kami memiliki program donasi untuk mendukung kegiatan sosial di komunitas lokal.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery menyediakan opsi makanan dengan bahan-bahan musiman lokal?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Kami berusaha menggunakan bahan-bahan musiman lokal sebanyak mungkin. Informasi lebih lanjut dapat ditanyakan kepada staf kami.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery memiliki program edukasi tentang kopi untuk pelanggan?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Kami sedang mengembangkan program edukasi tentang kopi untuk pelanggan. Informasi lebih lanjut akan diumumkan di media sosial kami.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery menyediakan opsi minuman dengan bahan-bahan superfood?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Kami menyediakan beberapa opsi minuman dengan bahan-bahan superfood seperti spirulina atau chia seeds.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery memiliki program kemitraan dengan seniman lokal?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Kami sesekali mengadakan pameran atau acara yang menampilkan karya seniman lokal.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery menyediakan opsi makanan dengan bahan-bahan organik?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Kami berusaha menggunakan bahan-bahan organik sebanyak mungkin. Informasi lebih lanjut dapat ditanyakan kepada staf kami.</p>
+            </div>
+        </div>
+
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery menyediakan opsi kopi decaf?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Ya, kami menyediakan opsi kopi decaf bagi pelanggan yang sensitif terhadap kafein atau yang menginginkan pilihan tanpa kafein.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery memiliki program langganan kopi?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Kami memiliki program langganan kopi bulanan, di mana pelanggan dapat menerima pilihan biji kopi segar langsung ke rumah mereka.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery menggunakan biji kopi organik?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Kami berusaha untuk menggunakan biji kopi organik sebanyak mungkin. Informasi tentang asal dan jenis biji kopi dapat ditanyakan kepada barista kami.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery menyediakan kopi dingin (cold brew)?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Ya, kami menyediakan kopi dingin yang diseduh secara perlahan untuk menghasilkan rasa yang halus dan menyegarkan.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery menyediakan opsi susu alternatif untuk kopi?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Ya, kami menyediakan berbagai opsi susu alternatif seperti susu almond, susu kedelai, dan susu oat.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery memiliki menu musiman?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Kami sering memperbarui menu kami dengan hidangan dan minuman musiman yang menggunakan bahan-bahan segar dan lokal.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery menyediakan opsi makanan bebas gluten?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Kami memiliki beberapa opsi makanan bebas gluten. Informasi lebih lanjut mengenai pilihan menu bebas gluten dapat ditanyakan kepada staf kami.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery menyediakan minuman mocktail?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Ya, kami menyediakan berbagai pilihan mocktail yang menyegarkan.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery menerima pemesanan untuk acara katering?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Ya, kami menerima pemesanan untuk acara katering dengan berbagai pilihan menu yang dapat disesuaikan.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery memiliki area outdoor?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Kami memiliki area outdoor yang nyaman untuk pelanggan yang ingin menikmati suasana di luar ruangan.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery menyediakan fasilitas untuk pertemuan bisnis?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Kami menyediakan ruang pribadi yang dapat digunakan untuk pertemuan bisnis dengan fasilitas presentasi.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery menjual peralatan kopi?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Kami menjual berbagai peralatan kopi, mulai dari alat seduh manual hingga mesin espresso rumahan.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery menyediakan opsi teh herbal?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Ya, kami memiliki berbagai pilihan teh herbal yang menenangkan dan menyegarkan.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery memiliki program diskon untuk pelajar atau mahasiswa?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Kami sering mengadakan promosi khusus untuk pelajar dan mahasiswa. Informasi lebih lanjut dapat ditanyakan kepada staf kami.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery menyediakan opsi makanan ringan untuk anak-anak?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Ya, kami memiliki beberapa pilihan makanan ringan yang disukai anak-anak.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Apakah Anchor Cafe & Roastery memiliki area bermain untuk anak-anak?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Kami berusaha untuk menciptakan suasana yang ramah keluarga, namun saat ini kami belum memiliki area bermain khusus untuk anak-anak.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</section>
+
+
+<!-- Footer -->
+    <footer>
+        <ul>
+            <li><a href="#" id="aboutFooterBtn">About Us</a></li>
+            <li><a href="#" id="privacyFooterBtn">Privacy Policy</a></li>
+            <li><a href="#" id="termsFooterBtn">Terms & Conditions</a></li>
+        </ul>
+        <p>&copy; 2025 Anchor Cafe & Roastery</p>
+</footer>
+
+<!-- Modal for About Us -->
+    <div id="modal-about" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+<h2>About Us</h2>
+<p><strong>Anchor Cafe & Roastery Batam:</strong> Surga Kopi Spesial dan Kuliner Lezat</p>
+
+<p><strong>Anchor Cafe & Roastery</strong> adalah salah satu kafe terbaik di Batam yang menyajikan <strong>kopi spesial berkualitas tinggi</strong> serta <strong>makanan rumahan khas Selatan Amerika</strong>. <br/>
+Terletak di <strong>Ruko Dermaga Culinary Blok RF No.11, Kota Batam</strong>, kafe ini menjadi destinasi favorit bagi pecinta kopi dan makanan lezat.</p>
+
+<br/>
+
+<p><strong>Kenapa Harus ke Anchor Cafe & Roastery?</strong></p>
+<p>☕ <strong>Kopi Spesial & Roastery Sendiri</strong> – Nikmati berbagai jenis kopi pilihan yang diproses secara profesional. <br/>
+🍔 <strong>Makanan Lezat Sepanjang Hari</strong> – Tersedia menu sarapan sepanjang hari, burger, sandwich, dan hidangan favorit ala Amerika Selatan. <br/>
+🏡 <strong>Suasana Nyaman & Instagramable</strong> – Dengan desain interior modern dan nyaman, cocok untuk nongkrong, kerja, atau bersantai. <br/>
+🎉 <strong>Ruang Acara Pribadi</strong> – Tersedia ruang untuk meeting, ulang tahun, atau gathering spesial.</p>
+
+<br/>
+
+<p><strong>Menu Favorit di Anchor Cafe & Roastery:</strong></p>
+<p>- <strong>Mommas Breakfast Platter</strong> – Sarapan lengkap yang menggugah selera. <br/>
+- <strong>Anchor Classic Nachos</strong> – Camilan lezat dengan keju leleh dan topping spesial. <br/>
+- <strong>All American Patty Melt</strong> – Burger dengan cita rasa khas Amerika. <br/>
+- <strong>Sweet and Smoky BBQ Sandwich</strong> – Perpaduan sempurna daging panggang dan saus BBQ. <br/>
+- <strong>Double Barrelled Grilled Cheese</strong> – Keju leleh dalam setiap gigitan!</p>
+
+<br/>
+
+<p><strong>Lokasi dan Jam Operasional:</strong></p>
+<p>📍 <strong>Alamat:</strong> Ruko Dermaga Culinary Blok RF No.11, Batam, Kepulauan Riau 29462 <br/>
+⏰ <strong>Jam Buka:</strong> Setiap hari, pukul 08.00 – 20.00</p>
+
+<br/>
+
+<p><strong>Hubungi & Kunjungi Anchor Cafe & Roastery:</strong></p>
+<p>📞 <strong>Telepon:</strong> +62 812 7070 2210 <br/>
+📧 <strong>Email:</strong> info@anchorcafeandroastery.com <br/>
+🌐 <strong>Website:</strong> <a href="https://www.anchorcafeandroastery.com">anchorcafeandroastery.com</a> <br/>
+📸 <strong>Instagram:</strong> <a href="https://www.instagram.com/anchor.cafe.roastery/">@anchor.cafe.roastery</a></p>
+
+<br/>
+
+<p><strong>Nikmati pengalaman ngopi terbaik di Anchor Cafe & Roastery Batam! 🚀☕</strong></p>
+        </div>
+    </div>
+
+<!-- Modal for Our Menu -->
+<div id="modal-services" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Our Menu</h2>
+        
+        <h3>Breakfast</h3>
+        <p><strong>Mommas Breakfast Platter</strong><br>
+        <img src="https://olo-images-live.imgix.net/7f/7f0b83ee901f4aad8f4d5e63b4e191cc.jpeg?auto=format%2Ccompress&q=60&cs=tinysrgb&w=1200&h=800&fit=fill&fm=png32&bg=transparent&s=c08ef7390c297868e6f5ad832c066f7b" alt="Mommas Breakfast Platter" width="500"><br>
+        Paket sarapan spesial dengan telur, sosis, bacon, dan roti panggang.</p>
+        <br />
+        <h3>Special Menu</h3>
+        <p><strong>Wagyu Steak</strong><br>
+        <img src="https://asset.kompas.com/crops/2ID3lEZw6eg92njcfX2W1IAZUTM=/0x0:1000x667/1200x800/data/photo/2024/04/06/6610f6e3511c4.jpg" alt="Wagyu Steak" width="500"><br>
+        Steak wagyu premium dengan tekstur lembut dan juicy, disajikan dengan mashed potato.</p>
+          <br />
+        <p><strong>Lobster Thermidor</strong><br>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Lobster_Thermidor_entree.jpg" alt="Lobster Thermidor" width="500"><br>
+        Hidangan mewah dengan lobster panggang, saus creamy, dan keju parmesan.</p>
+          <br />
+        <h3>Beverages</h3>
+        <p><strong>Iced Fruit Infused Water</strong><br>
+        Segarnya air infus buah dengan kombinasi lemon, stroberi, dan daun mint.</p>
+    </div>
+</div>
+
+<!-- Modal for Contact -->
+    <div id="modal-contact" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+<h2>Contact Us</h2>
+<p><strong>📍 Alamat:</strong> Ruko Dermaga Culinary Blok RF No.11, Batam, Kepulauan Riau</p>
+<p><strong>📞 Telepon:</strong> +62 812 7070 2210</p>
+<p><strong>📧 Email:</strong> info@anchorcafeandroastery.com</p>
+<p><strong>🌐 Website:</strong> <a href="https://www.anchorcafeandroastery.com" target="_blank">anchorcafeandroastery.com</a></p>
+</br>
+<h3>Informasi Tambahan</h3>
+<p><strong>Jam Operasional:</strong> <br> Senin - Minggu: 08.00 - 20.00</p>
+<p><strong>Media Sosial:</strong> <br> Instagram: <a href="https://www.instagram.com/anchor.cafe.roastery/" target="_blank">@anchor.cafe.roastery</a> <br> Facebook: Anchor Cafe & Roastery</p>
+        </div>
+    </div>
+
+<!-- Modal for Footer About Us -->
+    <div id="modal-footer-about" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+<h2>About Us</h2>
+<p>Anchor Cafe & Roastery adalah kafe yang mengkhususkan diri dalam kopi spesial buatan tangan dan makanan rumahan khas Selatan Amerika. Terletak di Ruko Dermaga Culinary Blok RF No.11, Kota Batam, Kepulauan Riau 29462, kafe ini buka setiap hari dari pukul 08.00 hingga 20.00.</p>
+<br />
+<p>
+    Menu mereka mencakup berbagai pilihan, termasuk sarapan sepanjang hari, hidangan pembuka, sup & salad, burger & sandwich, hidangan favorit Selatan, serta wafel dan pancake. Beberapa hidangan populer antara lain "Mommas Breakfast Platter", "Anchor Classic Nachos", dan "All American Patty Melt".
+</p>
+    </div>
+</div>
+
+<!-- Modal for Privacy Policy -->
+    <div id="modal-footer-privacy" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+<h2>Privacy Policy</h2>
+<h2>Kebijakan Privasi</h2>
+
+<p><strong>Terakhir diperbarui: [03 - Maret - 2025]</strong></p>
+<br />
+<p>Anchor Cafe & Roastery menghargai privasi pelanggan kami. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi pribadi Anda saat mengunjungi situs web kami atau menggunakan layanan kami.</p>
+<br />
+<h3>1. Informasi yang Kami Kumpulkan</h3>
+<p>Kami dapat mengumpulkan berbagai jenis informasi, termasuk tetapi tidak terbatas pada:</p>
+<ul>
+    <li>Nama lengkap</li>
+    <li>Alamat email</li>
+    <li>Nomor telepon</li>
+    <li>Informasi pembayaran</li>
+    <li>Alamat IP dan data analitik</li>
+</ul>
+<br />
+<h3>2. Cara Kami Menggunakan Informasi</h3>
+<p>Informasi yang kami kumpulkan dapat digunakan untuk:</p>
+<ul>
+    <li>Menyediakan layanan dan memproses pesanan</li>
+    <li>Meningkatkan pengalaman pelanggan</li>
+    <li>Mengirim pembaruan, promosi, atau informasi penting</li>
+    <li>Menjaga keamanan dan mencegah penipuan</li>
+</ul>
+<br />
+<h3>3. Perlindungan Data</h3>
+<p>Kami berkomitmen untuk melindungi informasi pribadi Anda dengan langkah-langkah keamanan yang sesuai. Namun, perlu diketahui bahwa tidak ada metode transmisi data melalui internet yang 100% aman.</p>
+<br />
+<h3>4. Penggunaan Cookie</h3>
+<p>Kami menggunakan cookie dan teknologi serupa untuk meningkatkan pengalaman pengguna, menganalisis lalu lintas situs, dan menyajikan iklan yang relevan.</p>
+<br />
+<h3>5. Berbagi Informasi kepada Pihak Ketiga</h3>
+<p>Kami tidak menjual, menukar, atau menyewakan informasi pribadi pengguna kepada pihak ketiga. Namun, kami dapat membagikan informasi dengan penyedia layanan pihak ketiga yang membantu kami mengoperasikan bisnis.</p>
+<br />
+<h3>6. Hak Pengguna</h3>
+<p>Anda memiliki hak untuk:</p>
+<ul>
+    <li>Meminta akses ke informasi pribadi Anda</li>
+    <li>Memperbarui atau menghapus data pribadi</li>
+    <li>Mengajukan keberatan terhadap penggunaan data tertentu</li>
+</ul>
+<br />
+<h3>7. Perubahan Kebijakan Privasi</h3>
+<p>Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu. Perubahan akan dipublikasikan di halaman ini dengan tanggal pembaruan terbaru.</p>
+<br />
+<h3>8. Hubungi Kami</h3>
+<p>Jika Anda memiliki pertanyaan mengenai Kebijakan Privasi ini, silakan hubungi kami:</p>
+<p><strong>Email:</strong> info@anchorcafeandroastery.com</p>
+<p><strong>Telepon:</strong> +62 812 7070 2210</p>
+<p><strong>Alamat:</strong> Ruko Dermaga Culinary Blok RF No.11, Batam, Kepulauan Riau</p>
+<br />
+<p><strong>Terima kasih telah mempercayai Anchor Cafe & Roastery!</strong></p>
+        </div>
+    </div>
+
+<!-- Modal for Terms & Conditions -->
+    <div id="modal-footer-terms" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+<h2>Terms and Conditions</h2>
+<h2>Syarat dan Ketentuan</h2>
+
+<p><strong>Terakhir diperbarui: [03 - Maret - 2025]</strong></p>
+<br />
+<p>Selamat datang di Anchor Cafe & Roastery. Dengan mengakses dan menggunakan situs web kami, Anda setuju untuk mematuhi syarat dan ketentuan berikut. Harap baca dengan saksama sebelum menggunakan layanan kami.</p>
+<br />
+<h3>1. Penggunaan Situs</h3>
+<p>Dengan mengakses situs ini, Anda setuju untuk menggunakan layanan kami hanya untuk tujuan yang sah dan tidak akan melanggar hukum atau hak pihak lain.</p>
+<br />
+<h3>2. Pemesanan dan Pembayaran</h3>
+<ul>
+    <li>Semua pesanan yang dilakukan melalui situs kami harus dibayar penuh sebelum diproses.</li>
+    <li>Kami berhak menolak atau membatalkan pesanan karena alasan tertentu, termasuk kesalahan harga atau ketersediaan produk.</li>
+</ul>
+<br />
+<h3>3. Kebijakan Pengembalian</h3>
+<p>Pengembalian atau penggantian hanya berlaku jika ada cacat pada produk yang diterima. Silakan hubungi kami dalam waktu 7 hari setelah menerima pesanan.</p>
+<br />
+<h3>4. Hak Kekayaan Intelektual</h3>
+<p>Semua konten di situs ini, termasuk teks, gambar, logo, dan desain, adalah milik Anchor Cafe & Roastery dan dilindungi oleh undang-undang hak cipta.</p>
+<br />
+<h3>5. Batasan Tanggung Jawab</h3>
+<p>Kami tidak bertanggung jawab atas kerugian atau kerusakan yang terjadi akibat penggunaan situs ini, baik secara langsung maupun tidak langsung.</p>
+<br />
+<h3>6. Perubahan Syarat dan Ketentuan</h3>
+<p>Kami berhak untuk mengubah atau memperbarui syarat dan ketentuan ini kapan saja tanpa pemberitahuan sebelumnya. Perubahan akan berlaku segera setelah dipublikasikan di situs ini.</p>
+<br />
+<h3>7. Hubungi Kami</h3>
+<p>Jika Anda memiliki pertanyaan tentang Syarat dan Ketentuan ini, silakan hubungi kami:</p>
+<p><strong>Email:</strong> info@anchorcafeandroastery.com</p>
+<p><strong>Telepon:</strong> +62 812 7070 2210</p>
+<p><strong>Alamat:</strong> Ruko Dermaga Culinary Blok RF No.11, Batam, Kepulauan Riau</p>
+<br />
+<p><strong>Terima kasih telah menggunakan layanan Anchor Cafe & Roastery!</strong></p>
+    </div>
+</div>
+
+<!-- Modal Wagyu Steak -->
+<div id="modal-apply" class="modal" itemscope itemtype="https://schema.org/Recipe">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 itemprop="name">Wagyu Steak</h2>
+        <br>
+        <h3>Manfaat Wagyu Steak</h3>
+        <ul>
+            <li><span itemprop="description">Kaya Protein: Membantu pembentukan otot dan menjaga kesehatan tubuh.</span></li>
+            <li><span itemprop="description">Mengandung Lemak Sehat: Lemak marbling pada wagyu mengandung asam lemak omega-3 dan omega-6.</span></li>
+            <li><span itemprop="description">Rasa Premium: Tekstur lembut dan juicy memberikan pengalaman makan yang mewah.</span></li>
+        </ul>
+        <br>
+        <h3>Bahan-bahan yang Umum Digunakan</h3>
+        <ul itemprop="ingredients">
+            <li>Wagyu beef steak</li>
+            <li>Garam laut</li>
+            <li>Lada hitam</li>
+            <li>Mentega</li>
+            <li>Rosemary atau thyme</li>
+            <li>Bawang putih</li>
+            <li>Minyak zaitun</li>
+        </ul>
+        <br />
+        <h3>Cara Membuat Wagyu Steak</h3>
+        <ol itemprop="recipeInstructions">
+            <li>Panaskan wajan dengan api sedang-tinggi dan tambahkan sedikit minyak zaitun.</li>
+            <li>Taburkan garam dan lada hitam di kedua sisi daging.</li>
+            <li>Masak steak selama 2-3 menit di setiap sisi hingga tingkat kematangan yang diinginkan.</li>
+            <li>Tambahkan mentega, rosemary, dan bawang putih ke dalam wajan.</li>
+            <li>Siramkan mentega cair ke atas steak untuk rasa lebih kaya.</li>
+            <li>Angkat steak dan diamkan selama beberapa menit sebelum disajikan.</li>
+        </ol>
+        <br />
+        <h3>Tips Tambahan</h3>
+        <ol>
+            <li>Gunakan termometer daging untuk mendapatkan kematangan yang sempurna.</li>
+            <li>Hindari menusuk daging agar tetap juicy.</li>
+            <li>Sajikan dengan mashed potato atau sayuran panggang.</li>
+        </ol>
+        <br>
+        <p><strong>Wagyu Steak</strong> adalah pilihan menu spesial untuk pengalaman makan yang luar biasa. Selamat menikmati!</p>
+        <br>
+        <img src="https://www.dukeshill.co.uk/cdn/shop/collections/Wagyu_RibEye_For_Web_03.jpg?v=1714563513" alt="Wagyu Steak" width="500" itemprop="image">
+        <br />
+    </div>
+</div>
+
+<!-- Modal Iced Fruit Infused Water -->
+ <div id="modal-apply1" class="modal" itemscope itemtype="https://schema.org/Recipe">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 itemprop="name">Iced Fruit Infused Water</h2>
+        <br>
+        <h3>Manfaat Iced Fruit Infused Water</h3>
+        <ul>
+            <li><span itemprop="description">Hidrasi: Air infus buah adalah cara yang enak untuk meningkatkan asupan air harian Anda.</span></li>
+            <li><span itemprop="description">Vitamin dan Mineral: Buah-buahan dan sayuran yang digunakan dalam air infus mengandung vitamin dan mineral penting.</span></li>
+            <li><span itemprop="description">Detoksifikasi: Beberapa buah dan sayuran memiliki sifat detoksifikasi yang dapat membantu membersihkan tubuh dari racun.</span></li>
+            <li><span itemprop="description">Peningkatan Metabolisme: Beberapa bahan, seperti lemon dan jahe, dapat membantu meningkatkan metabolisme.</span></li>
+            <li><span itemprop="description">Rendah Kalori: Air infus buah adalah alternatif yang sehat untuk minuman manis yang tinggi kalori.</span></li>
+        </ul>
+        <br>
+        <h3>Bahan-bahan yang Umum Digunakan</h3>
+        <ul itemprop="ingredients">
+            <li>Lemon</li>
+            <li>Mentimun</li>
+            <li>Stroberi</li>
+            <li>Jeruk</li>
+            <li>Raspberi</li>
+            <li>Kiwi</li>
+            <li>Nanas</li>
+            <li>Semangka</li>
+            <li>Melon</li>
+            <li>Daun mint</li>
+            <li>Jahe</li>
+        </ul>
+        <h3>Cara Membuat Iced Fruit Infused Water</h3>
+        <ol itemprop="recipeInstructions">
+            <li>Cuci bersih buah-buahan dan sayuran yang akan digunakan.</li>
+            <li>Potong buah-buahan dan sayuran menjadi irisan tipis.</li>
+            <li>Masukkan potongan buah-buahan dan sayuran ke dalam wadah berisi air dingin.</li>
+            <li>Diamkan selama beberapa jam atau semalaman di dalam kulkas agar rasa buah meresap ke dalam air.</li>
+            <li>Iced fruit infused water siap dinikmati.</li>
+        </ol>
+        <h3>Tips Tambahan</h3>
+        <ol>
+            <li>Gunakan buah-buahan dan sayuran segar untuk rasa yang terbaik.</li>
+            <li>Anda dapat bereksperimen dengan berbagai kombinasi buah-buahan dan sayuran sesuai selera.</li>
+            <li>Tambahkan es batu untuk sensasi yang lebih segar.</li>
+            <li>Air infus buah dapat disimpan di dalam kulkas selama 1-2 hari.</li>
+        </ol>
+        <br>
+        <p><strong>Iced fruit infused water</strong> adalah pilihan minuman yang sehat dan menyegarkan untuk dinikmati kapan saja. Selamat mencoba!</p>
+        <br />
+    </div>
+</div>
+
+<!-- Modal Mommas Breakfast Platter -->
+<div id="modal-apply2" class="modal" itemscope itemtype="https://schema.org/Recipe">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 itemprop="name">Mommas Breakfast Platter</h2>
+        <br>
+        <h3>Manfaat Mommas Breakfast Platter</h3>
+        <ul>
+            <li><span itemprop="description">Sumber Energi: Mengandung protein dan karbohidrat untuk memulai hari dengan energi maksimal.</span></li>
+            <li><span itemprop="description">Nutrisi Lengkap: Menyediakan kombinasi seimbang dari protein, lemak sehat, dan serat.</span></li>
+            <li><span itemprop="description">Meningkatkan Metabolisme: Protein dari telur dan daging membantu meningkatkan metabolisme.</span></li>
+            <li><span itemprop="description">Menjaga Kenyang Lebih Lama: Kandungan serat dari roti dan buah segar membantu mengontrol rasa lapar.</span></li>
+        </ul>
+        <br>
+        <h3>Bahan-bahan yang Umum Digunakan</h3>
+        <ul itemprop="ingredients">
+            <li>Telur (orak-arik atau mata sapi)</li>
+            <li>Daging asap renyah</li>
+            <li>Sosis panggang</li>
+            <li>Roti panggang dengan mentega</li>
+            <li>Kentang goreng atau hash browns</li>
+            <li>Buah segar</li>
+            <li>Secangkir kopi atau teh</li>
+        </ul>
+        <h3>Cara Membuat Mommas Breakfast Platter</h3>
+        <ol itemprop="recipeInstructions">
+            <li>Siapkan semua bahan yang dibutuhkan.</li>
+            <li>Goreng atau panggang daging asap dan sosis hingga matang.</li>
+            <li>Masak telur sesuai selera (orak-arik atau mata sapi).</li>
+            <li>Panggang roti dengan mentega hingga kecoklatan.</li>
+            <li>Sajikan semua bahan di piring bersama kentang goreng dan buah segar.</li>
+            <li>Nikmati dengan secangkir kopi atau teh.</li>
+        </ol>
+        <h3>Tips Tambahan</h3>
+        <ol>
+            <li>Gunakan telur organik untuk rasa yang lebih kaya.</li>
+            <li>Tambahkan keju atau alpukat untuk variasi rasa.</li>
+            <li>Sajikan dengan saus favorit Anda, seperti saus tomat atau mayones.</li>
+            <li>Pilih roti gandum untuk opsi yang lebih sehat.</li>
+        </ol>
+        <br>
+        <p><strong>Mommas Breakfast Platter</strong> adalah pilihan sarapan lengkap yang sempurna untuk memulai hari. Selamat menikmati!</p>
+        <br>
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/55/4c/93/enjoy-the-best-breakfast.jpg" alt="Mommas Breakfast Platter" width="500" itemprop="image">
+        <br />
+    </div>
+</div>
+
+
+<!-- Modal Classic Pancakes -->
+<div id="modal-apply3" class="modal" itemscope itemtype="https://schema.org/Recipe">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 itemprop="name">Classic Pancakes</h2>
+        <br>
+        <h3>Manfaat Classic Pancakes</h3>
+        <ul>
+            <li><span itemprop="description">Sumber Karbohidrat: Memberikan energi yang cukup untuk memulai hari.</span></li>
+            <li><span itemprop="description">Kaya Protein: Dapat dikombinasikan dengan telur dan susu untuk asupan protein yang baik.</span></li>
+            <li><span itemprop="description">Serbaguna: Bisa disajikan dengan berbagai topping seperti madu, sirup maple, atau buah segar.</span></li>
+        </ul>
+        <br>
+        <h3>Bahan-bahan yang Umum Digunakan</h3>
+        <ul itemprop="ingredients">
+            <li>Tepung terigu</li>
+            <li>Telur</li>
+            <li>Susu</li>
+            <li>Baking powder</li>
+            <li>Gula</li>
+            <li>Mentega</li>
+            <li>Sirup maple atau madu</li>
+            <li>Buah segar (stroberi, blueberry, pisang)</li>
+        </ul>
+        <h3>Cara Membuat Classic Pancakes</h3>
+        <ol itemprop="recipeInstructions">
+            <li>Campurkan tepung, baking powder, gula, dan garam dalam mangkuk besar.</li>
+            <li>Kocok telur dan susu, lalu tuangkan ke dalam campuran tepung.</li>
+            <li>Tambahkan mentega cair dan aduk hingga adonan tercampur rata.</li>
+            <li>Panaskan wajan dan tuang adonan sedikit demi sedikit untuk membentuk pancake.</li>
+            <li>Masak hingga muncul gelembung di permukaan, lalu balik dan masak hingga kecoklatan.</li>
+            <li>Sajikan dengan sirup maple, madu, atau buah segar.</li>
+        </ol>
+        <h3>Tips Tambahan</h3>
+        <ol>
+            <li>Gunakan susu almond atau oat untuk opsi yang lebih sehat.</li>
+            <li>Tambahkan bubuk kayu manis untuk aroma yang lebih nikmat.</li>
+            <li>Sajikan dengan yogurt untuk tambahan protein.</li>
+        </ol>
+        <br>
+        <p><strong>Classic Pancakes</strong> adalah pilihan sarapan manis yang lezat dan mudah dibuat. Selamat menikmati!</p>
+        <br>
+        <img src="https://mojo.generalmills.com/api/public/content/Pw6SBIgi-Ee6pTZBpU1oBg_gmi_hi_res_jpeg.jpeg?v=448d88d0&t=466b54bb264e48b199fc8e83ef1136b4" alt="Classic Pancakes" width="500" itemprop="image">
+        <br />
+    </div>
+</div>
+
+<!-- Modal Avocado Toast -->
+<div id="modal-apply4" class="modal" itemscope itemtype="https://schema.org/Recipe">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 itemprop="name">Avocado Toast</h2>
+        <br>
+        <h3>Manfaat Avocado Toast</h3>
+        <ul>
+            <li><span itemprop="description">Kaya Lemak Sehat: Alpukat mengandung lemak tak jenuh yang baik untuk kesehatan jantung.</span></li>
+            <li><span itemprop="description">Sumber Serat: Membantu pencernaan dan memberikan rasa kenyang lebih lama.</span></li>
+            <li><span itemprop="description">Mudah Disiapkan: Sarapan cepat dan praktis dengan bahan sederhana.</span></li>
+        </ul>
+        <br>
+        <h3>Bahan-bahan yang Umum Digunakan</h3>
+        <ul itemprop="ingredients">
+            <li>Roti gandum</li>
+            <li>Alpukat matang</li>
+            <li>Garam dan lada hitam</li>
+            <li>Perasan lemon</li>
+            <li>Cabai bubuk (opsional)</li>
+            <li>Telur rebus atau poached egg (opsional)</li>
+            <li>Tomat ceri (opsional)</li>
+        </ul>
+        <h3>Cara Membuat Avocado Toast</h3>
+        <ol itemprop="recipeInstructions">
+            <li>Panggang roti gandum hingga renyah.</li>
+            <li>Hancurkan alpukat dalam mangkuk dan tambahkan garam, lada, serta perasan lemon.</li>
+            <li>Oleskan alpukat yang sudah dihancurkan di atas roti panggang.</li>
+            <li>Tambahkan topping sesuai selera, seperti telur rebus, tomat ceri, atau cabai bubuk.</li>
+            <li>Sajikan segera.</li>
+        </ol>
+        <h3>Tips Tambahan</h3>
+        <ol>
+            <li>Gunakan roti sourdough untuk tekstur yang lebih renyah.</li>
+            <li>Tambahkan biji chia atau biji wijen untuk ekstra nutrisi.</li>
+            <li>Panggang tomat sebentar untuk rasa yang lebih manis.</li>
+        </ol>
+        <br>
+        <p><strong>Avocado Toast</strong> adalah pilihan sarapan sehat yang mudah dibuat dan kaya nutrisi. Selamat menikmati!</p>
+        <br>
+        <img src="https://californiaavocado.com/wp-content/uploads/2020/07/California-Avocado-Toast-Three-Ways.jpeg" alt="Avocado Toast" width="500" itemprop="image">
+        <br />
+    </div>
+</div>
+
+<!-- Modal Eggs Benedict -->
+<div id="modal-apply5" class="modal" itemscope itemtype="https://schema.org/Recipe">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 itemprop="name">Eggs Benedict</h2>
+        <br>
+        <h3>Manfaat Eggs Benedict</h3>
+        <ul>
+            <li><span itemprop="description">Sumber Protein: Telur dan ham memberikan protein yang baik untuk otot.</span></li>
+            <li><span itemprop="description">Lezat dan Bergizi: Kombinasi telur, saus hollandaise, dan roti panggang memberikan rasa yang kaya.</span></li>
+            <li><span itemprop="description">Energi Pagi Hari: Karbohidrat dari roti dan lemak sehat dari telur memberi energi yang cukup.</span></li>
+        </ul>
+        <br>
+        <h3>Bahan-bahan yang Umum Digunakan</h3>
+        <ul itemprop="ingredients">
+            <li>Telur</li>
+            <li>English muffin</li>
+            <li>Ham atau smoked salmon</li>
+            <li>Saus hollandaise</li>
+            <li>Mentega</li>
+            <li>Garam dan lada</li>
+            <li>Perasan lemon</li>
+            <li>Daun peterseli (opsional)</li>
+        </ul>
+        <h3>Cara Membuat Eggs Benedict</h3>
+        <ol itemprop="recipeInstructions">
+            <li>Panaskan air dalam panci dan buat poached egg dengan merebus telur tanpa cangkang.</li>
+            <li>Panggang English muffin hingga kecoklatan.</li>
+            <li>Letakkan ham atau smoked salmon di atas muffin.</li>
+            <li>Taruh poached egg di atas ham.</li>
+            <li>Siram dengan saus hollandaise yang telah disiapkan.</li>
+            <li>Tambahkan garam, lada, dan daun peterseli sebagai garnish.</li>
+        </ol>
+        <h3>Tips Tambahan</h3>
+        <ol>
+            <li>Gunakan cuka dalam air rebusan untuk hasil poached egg yang lebih baik.</li>
+            <li>Tambahkan alpukat untuk varian yang lebih kaya rasa.</li>
+            <li>Sajikan dengan salad segar sebagai pelengkap.</li>
+        </ol>
+        <br>
+        <p><strong>Eggs Benedict</strong> adalah menu sarapan klasik dengan rasa yang lezat dan mewah. Selamat mencoba!</p>
+        <br>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Traditional_Eggs_Benedict.jpg/640px-Traditional_Eggs_Benedict.jpg" alt="Eggs Benedict" width="500" itemprop="image">
+        <br />
+    </div>
+</div>
+
+<!-- Modal French Toast -->
+<div id="modal-apply6" class="modal" itemscope itemtype="https://schema.org/Recipe">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 itemprop="name">French Toast</h2>
+        <br>
+        <h3>Manfaat French Toast</h3>
+        <ul>
+            <li><span itemprop="description">Sumber Energi: Kombinasi roti, telur, dan susu memberikan energi yang cukup.</span></li>
+            <li><span itemprop="description">Kaya Rasa: Perpaduan manis dari kayu manis dan sirup membuatnya sangat lezat.</span></li>
+            <li><span itemprop="description">Cepat dan Mudah: Bisa dibuat hanya dalam beberapa menit untuk sarapan yang praktis.</span></li>
+        </ul>
+        <br>
+        <h3>Bahan-bahan yang Umum Digunakan</h3>
+        <ul itemprop="ingredients">
+            <li>Roti tawar atau brioche</li>
+            <li>Telur</li>
+            <li>Susu</li>
+            <li>Gula</li>
+            <li>Kayu manis</li>
+            <li>Vanili</li>
+            <li>Mentega</li>
+            <li>Sirup maple atau madu</li>
+            <li>Buah segar (pisang, stroberi, blueberry)</li>
+        </ul>
+        <h3>Cara Membuat French Toast</h3>
+        <ol itemprop="recipeInstructions">
+            <li>Kocok telur, susu, gula, kayu manis, dan vanili dalam satu wadah.</li>
+            <li>Celupkan roti ke dalam campuran telur hingga meresap.</li>
+            <li>Panaskan wajan dan lelehkan mentega.</li>
+            <li>Goreng roti di atas wajan hingga kecoklatan di kedua sisi.</li>
+            <li>Sajikan dengan sirup maple, madu, atau buah segar.</li>
+        </ol>
+        <h3>Tips Tambahan</h3>
+        <ol>
+            <li>Gunakan roti yang agak tebal agar tidak mudah hancur.</li>
+            <li>Tambahkan bubuk kakao untuk varian rasa cokelat.</li>
+            <li>Sajikan dengan krim kocok untuk ekstra kelembutan.</li>
+        </ol>
+        <br>
+        <p><strong>French Toast</strong> adalah menu sarapan klasik yang manis dan lezat. Selamat mencoba!</p>
+        <br>
+        <img src="https://assets-jpcust.jwpsrv.com/thumbnails/GglMy51k-720.jpg" alt="French Toast" width="500" itemprop="image">
+        <br />
+    </div>
+</div>
+
+
+
+<script>
+        // Modal functionality for Header
+        function showModal(modalId) {
+            const modal = document.getElementById(modalId);
+            const closeModal = modal.querySelector('.close');
+            modal.style.display = 'block';
+
+            closeModal.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+
+            window.onclick = function(event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            };
+        }
+
+        // Apply Modals
+       document.getElementById('applyBtn').addEventListener('click', () => showModal('modal-apply'));
+
+
+       // Apply Modals
+       document.getElementById('applyBtn1').addEventListener('click', () => showModal('modal-apply1'));
+       document.getElementById('applyBtn2').addEventListener('click', () => showModal('modal-apply2'));
+       document.getElementById('applyBtn3').addEventListener('click', () => showModal('modal-apply3'));
+       document.getElementById('applyBtn4').addEventListener('click', () => showModal('modal-apply4'));
+       document.getElementById('applyBtn5').addEventListener('click', () => showModal('modal-apply5'));
+       document.getElementById('applyBtn6').addEventListener('click', () => showModal('modal-apply6'));
+
+        // Header Modals
+        document.getElementById('aboutBtn').addEventListener('click', () => showModal('modal-about'));
+        document.getElementById('servicesBtn').addEventListener('click', () => showModal('modal-services'));
+        document.getElementById('contactBtn').addEventListener('click', () => showModal('modal-contact'));
+
+        // Footer Modals
+        document.getElementById('aboutFooterBtn').addEventListener('click', () => showModal('modal-footer-about'));
+        document.getElementById('privacyFooterBtn').addEventListener('click', () => showModal('modal-footer-privacy'));
+        document.getElementById('termsFooterBtn').addEventListener('click', () => showModal('modal-footer-terms'));
+    </script>
+
+</body>
+</html>
